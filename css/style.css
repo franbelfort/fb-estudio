@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efd3bb;
+    font-family:'Lato', Helvetica, Arial;
+    font-size:15px;
+    display:flex;
+    margin:0;
+    min-height:100vh;
+}
+
+.models {
+    display:none;
+}
+
+header {
+    position: fixed;
+    left:0;
+    top:0;
+    right:0;
+    height:90px;
+    background-color:#8da3a6;
+    display:flex; /* none; */
+    justify-content:space-between; /* flex-end; */
+    align-items: center;
+}
+
+header h1 {
+    margin-left: 32rem;
+    color: #553a2b;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+.list-items li a{
+    color: #553a2b;
+}
+
+.menu-openner {
+    margin-right: 15px;
+    font-size: 26px;
+    background-color: #efd3bb;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-openner span {
+    margin-right:10px;
+}
+
+.menu-closer {
+    width:32px;
+    height:32px;
+    display:none;
+    font-size: 30px;
+}
+
+aside {
+    background-color:#553a2b;
+    width:0vw;
+    font-family:'Inter Tight', sans-serif;
+    transition:all ease .2s;
+    overflow-x:hidden;
+}
+
+aside.show {
+    width:30vw;
+}
+
+.cart--area {
+    margin-top: 30px; /* ajuste */
+    padding:20px;
+}
+
+.cart--area h1 {
+    display: relative;
+    color: #FFF;
+}
+
+main {
+    flex:1;
+    padding:20px;
+    margin-top:60px;
+}
+
+h1, h2 {
+    font-family:'Inter Tight', sans-serif;
+    text-align: center;
+}
+
+h2{
+
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.arte-area {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.arte-item {
+    text-align: center;
+    max-width:150px;
+    font-family:'Inter Tight', sans-serif;
+    margin:0 auto 50px auto;
+}
+
+.arte-item a {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    text-decoration: none;
+}
+
+.arte-item--img {
+    width:200px;
+    height:200px;
+    background-color:#EEE;
+    border-radius:0px;
+    box-shadow:0px 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+.arte-item--img img {
+    width:100%;
+    height:auto;
+}
+
+.arte-item--add {
+    width:50px;
+    height:50px;
+    line-height:50px;
+    border-radius:25px;
+    background-color:#553a2b;
+    text-align:center;
+    color:#FFF;
+    font-size:22px;
+    cursor:pointer;
+    margin-top:50px;
+    transition:all ease .2s;
+}
+
+.arte-item a:hover .arte-item--add {
+    background-color:#ba8469;
+    color: black;
+}
+
+.arte-item--price {
+    font-size:15px;
+    color:#333;
+    margin-top:5px;
+}
+
+.arte-item--name {
+    font-size:20px;
+    font-weight: bold;
+    color:#000;
+    margin-top:5px;
+}
+
+.arte-item--desc {
+    font-size:13px;
+    color:#555;
+    margin-top:10px;
+}
+
+.arteWindowArea {
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(255, 255, 255, 0.5);
+    display:none;
+    transition: all ease .5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y:auto;
+}
+
+.arteWindowBody {
+    width:900px;
+    background-color:#FFF;
+    border-radius:10px;
+    box-shadow:0px 0px 15px #999;
+    display:flex;
+    margin:20px 0px;
+}
+
+.arteBig {
+    flex:1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arteBig--back {
+    position:absolute;
+    width:30px;
+    height:30px;
+    background-color:#000;
+}
+
+.arteBig img {
+    height:400px;
+    width:auto;
+}
+
+.arteInfo {
+    flex:1;
+    font-family:'Inter Tight', sans-serif;
+    padding-bottom:50px;
+}
+
+.arteInfo h1 {
+    margin-top:50px;
+}
+
+.arteInfo .arteInfo--desc {
+    font-size:15px;
+    color:#999;
+    margin-top:10px;
+    font-family:'Lato',Helvetica,Arial;
+}
+
+.arteInfo--sector {
+    color:#CCC;
+    text-transform: uppercase;
+    font-size:14px;
+    margin-top:30px;
+    margin-bottom:10px;
+}
+
+.arteInfo--sizes {
+    display:inline-flex;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.arteInfo--size {
+    padding:10px 15px;
+    color:#000;
+    background-color:#EEE;
+    font-size:13px;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.arteInfo--size:hover {
+    background-color:#CCC;
+}
+
+.arteInfo--size.selected {
+    background-color:#553a2b;
+    color:#FFF;
+}
+
+.arteInfo--size.selected span {
+    color:#D6D6D6;
+}
+
+.arteInfo--size span {
+    font-size:12px;
+    color:#999;
+    font-weight: normal;
+}
+
+.arteInfo--price {
+    display:flex;
+    align-items:center;
+}
+
+.arteInfo--actualPrice {
+    font-size:28px;
+    margin-right:30px;
+}
+
+.arteInfo--qtarea {
+    display:inline-flex;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+}
+
+.arteInfo--qtarea button {
+    border:0;
+    background-color:transparent;
+    font-size:17px;
+    outline:0;
+    cursor:pointer;
+    padding:0px 10px;
+    color:#333;
+}
+
+.arteInfo--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+
+.arteInfo--addButton {
+    margin-top:30px;
+    padding:20px 30px;
+    border-radius:20px;
+    background-color: #553a2b;
+    color: #FFF;
+    display:inline-block;
+    cursor:pointer;
+    margin-right:30px;
+}
+
+.arteInfo--addButton:hover {
+    background-color:#ba8469;
+    color: black;
+}
+
+.arteInfo--cancelButton {
+    display:inline-block;
+    cursor:pointer;
+}
+
+.arteInfo--cancelMobileButton {
+    display:none;
+    height:40px;
+    text-align:center;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.cart {
+    margin-bottom:20px;
+    color: #FFF;
+}
+
+.cart--item {
+    display:flex;
+    align-items:center;
+    margin:10px 0;
+    color: #FFF;
+}
+
+.cart--item img {
+    width:40px;
+    height:40px;
+    margin-right:20px;
+}
+
+.cart--item-nome {
+    flex:1;
+    color: #FFF;
+}
+
+.cart--item--qtarea {
+    display:inline-flex;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+}
+
+.cart--item--qtarea button {
+    border:0;
+    background-color:transparent;
+    font-size:17px;
+    outline:0;
+    cursor:pointer;
+    padding:0px 10px;
+    color:#333;
+}
+
+.cart--item--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color: black;
+}
+
+.cart--totalitem {
+    padding:15px 0;
+    border-top:1px solid #d19473;
+    color: #FFF;
+    display:flex;
+    justify-content: space-between;
+    font-size:15px;
+}
+
+.cart--totalitem span:first-child {
+    font-weight: bold;
+}
+
+.cart--totalitem.big {
+    font-size:20px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.cart--finalizar {
+    padding:20px 30px;
+    border-radius:20px;
+    background-color:#ba8469; 
+    color:#FFF;
+    cursor:pointer;
+    text-align:center;
+    margin-top:20px;
+    border:2px solid #d19473; /* alterar para a mesma cor do fundo*/
+    transition: all ease .2s;
+}
+
+.cart--finalizar:hover {
+    background-color:#c58566;
+    color: black;
+}
+
+@media (max-width:1000px) {
+    .arte-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:840px) {
+    body {
+        flex-direction: column;
+    }
+    .arte-area {
+        display:block;
+    }
+    .arte-item {
+        max-width:100%;
+    }
+    header {
+        display:flex;
+    }
+    /*
+    main {
+        padding-top:60px;
+    }
+    */
+    aside {
+        width:auto;
+        position:fixed;
+        left:100vw;
+        right:0;
+        top:0;
+        bottom:0;
+        transition: all ease .2s;
+    }
+    aside.show {
+        width:auto;
+    }
+    .cart--area {
+        width:100vw;
+    }
+
+    .menu-closer {
+        display:block;
+    }
+
+    .arteWindowArea {
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
+
+    .arteWindowBody {
+        width:100vw;
+        display:block;
+        padding:20px;
+        border-radius:0;
+        box-shadow:none;
+        margin:0;
+    }
+
+    .arteBig img {
+        width: 75%;
+        height: auto;
+    }
+
+    .arteInfo h1 {
+        margin-top:20px;
+    }
+
+    .arteInfo--qtarea {
+        height:60px;
+    }
+    
+    .arteInfo--qtarea button {
+        font-size:25px;
+        padding:0px 25px;
+    }
+
+    .arteInfo--qt {
+        line-height: 60px;
+        font-size:20px;
+    }
+
+    .arteInfo--addButton {
+        font-size:20px;
+        display:block;
+        text-align:center;
+        margin:30px auto;
+    }
+
+    .arteInfo--cancelButton {
+        display:none;
+    }
+
+    .arteInfo--cancelMobileButton {
+        display:block;
+    }
+
+}
+
+@media (max-width:450px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .menu-openner {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:380px) {
+    header h1 {
+        font-size: 1rem;
+    }
+    .menu-openner {
+        font-size: 1.5rem;
+    }
+}
+
+#img-logo {
+    width: 50px;
+}

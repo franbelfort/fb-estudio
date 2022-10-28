@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="images/favicon.png" />
+    
+        <title>Já sou cliente</title>
+        <link rel="stylesheet" type="text/css" href="css/style1.css" media="screen">
+
+    </head>
+
+    <body>  
+        
+        <form id="form" class="form">
+
+            <h2> Seja bem vindo!</h2>
+
+                        <div class="right">
+                    <form action="">
+
+                    
+
+                        <input id="email" type="email" name="email" placeholder="Email ou telefone" class= "inputs required" oninput="emailValidate()"/>
+                        <span class="span-required">Digite um email válido</span>
+                    
+
+                
+                        <input type="password" name="senha" placeholder="Senha" class= "inputs required" oninput="mainPasswordValidate()"/>
+                        <span class="span-required">Digite uma senha com no minimo 8 caracteres</span>
+                    
+                        <input type="submit" name="acao" value="Entrar" class="right_loginBtn right_loginBtn--hover" oninput="entrarLoja()">
+                        <a href="" class="right_forget">Esqueceu a senha?</a>
+                        <div class="right_sign-up">
+                            <a href="" class="right_sign-upBtn right_sign-upBtn--hover">Criar nova conta</a>
+                        </div>
+                    </form>
+                </div>
+                <script type="text/javascript" src="loja.js"></script>
+        </body>
+</html>

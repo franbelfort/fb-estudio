@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" />
+
+    <title>FB Estúdio de Arte</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- modelos de arte na lista e no carrinho -->
+    <div class="models">
+
+        <!-- arte na lista -->
+        <div class="arte-item">
+            <a href="">
+                <div class="arte-item--img"><img src="" /></div>
+                <div class="arte-item--add">+</div>
+            </a>
+            <div class="arte-item--price">R$ --</div>
+            <div class="arte-item--name">--</div>
+            <div class="arte-item--desc">--</div>
+        </div>
+
+        <!-- arte no carrinho -->
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /models -->
+
+    <!-- .menu-openner aparecera no modo mobile -->
+        <header class="container-externo">
+            
+        <h1>FB Estúdio de Arte</h1>
+            <div class="flex-container menu">
+            <ul class="list-items">
+                <li><a href="pag003.html">Quem Somos</a></li>
+                <li><a href="pag004.html">Serviços</a></li>
+                
+            </ul>
+        </div>
+        <div class="menu-openner"><span>0</span>🛒</div>
+    </header>
+    <!-- /menu-openner -->
+
+    <!-- conteudo principal -->
+    <main>
+        
+        <h2>Conheça os nossos produtos</h2>
+
+        <div class="arte-area"></div>
+    </main>     
+    <!-- /conteudo principal -->
+
+    <!-- aside do carrinho -->
+    <aside>
+        <div class="cart--area">
+            <div class="menu-closer">❌</div>
+            <h1>Seus Pedidos</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem desconto">
+                    <span>Desconto</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--finalizar">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+    <!-- /aside do carrinho -->
+
+    <!-- janela modal .arteWindowArea -->
+    <div class="arteWindowArea">
+        <div class="arteWindowBody">
+            <div class="arteInfo--cancelMobileButton">Voltar</div>
+            <div class="arteBig">
+                <img src="" />
+            </div>
+            <div class="arteInfo">
+                <h1>--</h1>
+                <div class="arteInfo--desc">--</div>
+                <div class="arteInfo--sizearea">
+                    <div class="arteInfo--sector">Tamanho</div>
+                    <div class="arteInfo--sizes">
+                        <div data-key="P" class="arteInfo--size">PEQUENA <span>--</span></div>
+                        <div data-key="M" class="arteInfo--size">MÉDIA <span>--</span></div>
+                        <div data-key="G" class="arteInfo--size selected">GRANDE <span>--</span></div>
+                    </div>
+                </div>
+                <div class="arteInfo--pricearea">
+                    <div class="arteInfo--sector">Preço</div>
+                    <div class="arteInfo--price">
+                        <div class="arteInfo--actualPrice">R$ --</div>
+                        <div class="arteInfo--qtarea">
+                            <button class="arteInfo--qtmenos">-</button>
+                            <div class="arteInfo--qt">1</div>
+                            <button class="arteInfo--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="arteInfo--addButton">Adicionar ao carrinho</div>
+                <div class="arteInfo--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>
+    <!-- /janela modal .arteWindowArea -->
+    <script src="arte.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
